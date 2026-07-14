@@ -1,0 +1,16 @@
+include README.md
+include license.txt
+include requirements.txt
+include patches.txt
+
+recursive-include kirana_ledger *.py
+recursive-include kirana_ledger *.json
+recursive-include kirana_ledger *.js
+recursive-include kirana_ledger *.css
+recursive-include kirana_ledger *.html
+recursive-include kirana_ledger *.svg
+recursive-include kirana_ledger *.md
+recursive-include kirana_ledger *.txt
+recursive-include kirana_ledger *.xml
+recursive-include kirana_ledger *.png
+recursive-exclude kirana_ledger *.pyc

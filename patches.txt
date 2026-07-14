@@ -1,0 +1,3 @@
+# Patches for Kirana Ledger
+# Format: {app_name}.{module}.{function}
+# Example: kirana_ledger.kirana_ledger.setup.after_install

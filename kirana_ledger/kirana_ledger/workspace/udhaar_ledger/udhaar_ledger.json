@@ -1,0 +1,146 @@
+{
+ "charts": [],
+ "content": [
+  {
+   "id": "stats",
+   "label": "Udhaar Overview",
+   "type": "number_card",   "cards": [
+     {
+      "number_card_name": "Total Outstanding Udhaar",
+      "label": "Total Outstanding Udhaar",
+      "type": "number_card"
+     },
+     {
+      "number_card_name": "Customers Over Limit",
+      "label": "Customers Over Limit",
+      "type": "number_card"
+     }
+    ]
+  },
+  {
+   "id": "shortcuts",
+   "label": "Quick Actions",
+   "type": "shortcut",
+   "shortcuts": [
+    {
+     "icon": "user",
+     "label": "New Udhaar Customer",
+     "type": "DocType",
+     "link_to": "Udhaar Customer",
+     "doc_view": "New"
+    },
+    {
+     "icon": "exchange",
+     "label": "New Udhaar Entry",
+     "type": "DocType",
+     "link_to": "Udhaar Entry",
+     "doc_view": "New"
+    },
+    {
+     "icon": "list",
+     "label": "All Customers",
+     "type": "DocType",
+     "link_to": "Udhaar Customer",
+     "doc_view": "List"
+    },
+    {
+     "icon": "cube",
+     "label": "Inventory Items",
+     "type": "DocType",
+     "link_to": "Quick Inventory Item",
+     "doc_view": "List"
+    },
+    {
+     "icon": "chart",
+     "label": "Daily Udhaar Summary",
+     "type": "Report",
+     "link_to": "Daily Udhaar Summary",
+     "doc_view": "Report"
+    },
+    {
+     "icon": "exclamation-triangle",
+     "label": "Over Credit Limit",
+     "type": "Report",
+     "link_to": "Customers Over Credit Limit",
+     "doc_view": "Report"
+    }
+   ]
+  }
+ ],
+ "creation": "2024-01-01 00:00:00",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "inbox",
+ "idx": 0,
+ "indicator_color": "blue",
+ "is_hidden": 0,
+ "label": "Udhaar Ledger",
+ "links": [],
+ "modified": "2024-01-01 00:00:00",
+ "module": "Kirana Ledger",
+ "name": "Udhaar Ledger",
+ "number_cards": [
+  {
+   "number_card_name": "Total Outstanding Udhaar",
+   "label": "Total Outstanding Udhaar",
+   "type": "number_card"
+  },
+  {
+   "number_card_name": "Customers Over Limit",
+   "label": "Customers Over Limit",
+   "type": "number_card"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "roles": [],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "doc_view": "New",
+   "icon": "user",
+   "label": "New Udhaar Customer",
+   "link_to": "Udhaar Customer",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "New",
+   "icon": "exchange",
+   "label": "New Udhaar Entry",
+   "link_to": "Udhaar Entry",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "icon": "list",
+   "label": "All Customers",
+   "link_to": "Udhaar Customer",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "icon": "cube",
+   "label": "Inventory Items",
+   "link_to": "Quick Inventory Item",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "Report",
+   "icon": "chart",
+   "label": "Daily Udhaar Summary",
+   "link_to": "Daily Udhaar Summary",
+   "type": "Report"
+  },
+  {
+   "doc_view": "Report",
+   "icon": "exclamation-triangle",
+   "label": "Over Credit Limit",
+   "link_to": "Customers Over Credit Limit",
+   "type": "Report"
+  }
+ ],
+ "title": "Udhaar Ledger"
+}

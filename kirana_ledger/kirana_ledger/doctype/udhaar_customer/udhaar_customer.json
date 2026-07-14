@@ -1,0 +1,112 @@
+{
+ "autoname": "field:customer_name",
+ "creation": "2024-01-01 00:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_name",
+  "phone",
+  "preferred_language",
+  "credit_limit",
+  "current_balance"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Phone",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "Hindi",
+   "fieldname": "preferred_language",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Preferred Language",
+   "options": "\nHindi\nTamil\nTelugu\nMalayalam\nKannada\nEnglish",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "fieldname": "credit_limit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Credit Limit",
+   "non_negative": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "fieldname": "current_balance",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Current Balance",
+   "non_negative": 1,
+   "read_only": 1
+  }
+ ],
+ "icon": "fa fa-user",
+ "is_submittable": 0,
+ "istable": 0,
+ "links": [
+  {
+   "group": "Entries",
+   "link_doctype": "Udhaar Entry",
+   "link_fieldname": "customer"
+  }
+ ],
+ "modified": "2024-01-01 00:00:00",
+ "module": "Kirana Ledger",
+ "name": "Udhaar Customer",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Shop Owner",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "customer_name, phone",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
