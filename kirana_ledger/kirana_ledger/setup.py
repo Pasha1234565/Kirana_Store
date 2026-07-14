@@ -5,17 +5,19 @@ from frappe.utils import nowdate, add_days
 
 
 def after_install():
-    """Run after the app is installed on a site."""
+    """Run after the app is installed on a site.
+    Note: Custom DocTypes are NOT synced yet at this point,
+    so we can only create system-level records (like roles).
+    """
     create_roles()
-    create_number_cards()
-    create_notification_settings()
-    create_demo_data()
 
 
 def after_migrate():
-    """Run after bench migrate. Creates workspace fixtures."""
-    # Workspace is already handled via fixture system
-    pass
+    """Run after bench migrate. DocTypes are now synced,
+    so we can safely create records referencing custom DocTypes."""
+    create_number_cards()
+    create_notification_settings()
+    create_demo_data()
 
 
 def create_roles():
