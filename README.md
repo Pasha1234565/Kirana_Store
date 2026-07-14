@@ -50,37 +50,41 @@ An **Udhaar Ledger** workspace is auto-created on install with:
 
 ### Prerequisites
 
-- ERPNext v15 / Frappe v15 installed via Frappe Bench
+- ERPNext v15 / Frappe v15+ installed via Frappe Bench
 - Python 3.10+
-- Node.js 16+
 - MariaDB 10.6+
 
-### Steps
+### Known Issue: Frappe v15+ esbuild bug
+
+Frappe v15's esbuild has a bug that crashes when `bench get-app` tries to build an app that isn't yet registered in `sites/apps.txt`. The app has no frontend assets, so **the build step is unnecessary**. Use the manual installation below to bypass this.
+
+### Steps (Manual — Recommended)
 
 ```bash
-# 1. Go to your bench directory
+# 1. Go to your bench and clone the app directly
+cd ~/frappe-bench/apps
+git clone https://github.com/Pasha1234565/Kirana_Store.git kirana_ledger
+
+# 2. Go back to bench root
 cd ~/frappe-bench
 
-# 2. Get the app
-bench get-app https://github.com/Pasha1234565/Kirana_Store.git
+# 3. Add app to sites/apps.txt so Frappe can find it
+echo "kirana_ledger" >> ~/frappe-bench/sites/apps.txt
 
-# 3. Install on your site
+# 4. Install on your site
 bench --site yoursite.local install-app kirana_ledger
 
-# 4. (Optional) Set developer mode
-bench --site yoursite.local set-config developer_mode 1
-
-# 5. Build and migrate
-bench build
-bench migrate
+# 5. Migrate to sync DocTypes and create demo data
+bench --site yoursite.local migrate
 ```
 
-> The `after_install` hook will automatically:
-> - Create the **Shop Owner** role
-> - Set up **Number Cards** for the workspace
+> The `after_migrate` hook will automatically:
+> - Create **Number Cards** (Total Outstanding Udhaar & Customers Over Limit)
 > - Create **demo customers** (8 customers with Udhaar entries)
 > - Create **demo inventory items** (8 items with stock estimates)
 > - Create the **Credit Limit Breach** notification
+> 
+> The **Shop Owner** role is created during `install-app`.
 
 ### Post-Install Setup
 
